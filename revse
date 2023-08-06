@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    int n,i,j;
+    printf("enter the size of the string");
+    scanf("%d",&n);
+    char str1[n];
+    printf("enter the string");
+    scanf("%s",str1);
+    char str2[n];
+    for(i=strlen(str1)-1,j=0;i>=0;i--,j++)
+    {
+        str2[j]=str1[i];
+    }
+    printf("%s",str2);
+}
