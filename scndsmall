@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()  
+{
+  int n;
+  printf("enter the size of the array");
+  scanf("%d",&n);
+  int  a[n];
+  for(int i=0;i<n;i++)
+  {
+      scanf("%d",&a[i]);
+  }
+  int small=a[1];
+  int scsmall=a[0];
+  for(int i=0;i<n;i++)
+  {
+      if(small>a[i])
+      {
+          scsmall=small;
+          small=a[i];
+      }
+     else if(a[i]<scsmall&&a[i]>small)
+     scsmall=a[i];
+  }
+  printf("smallest and second smallest is %d   %d ",small,scsmall);
+}
