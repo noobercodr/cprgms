@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() 
+{
+   char s1[100],s2[100],s3[100];
+   printf("enter the words to concat");
+   scanf("%s",s1);
+   scanf("%s",s2);
+   int len1=0;
+   for(int i=0;s1[i]!='\0';i++)
+   {
+       len1++;
+       s3[i]=s1[i];
+   }
+   for(int j=0;s2[j]!=0;j++)
+   {
+       s3[j+len1]=s2[j];
+   }
+   //s3[len1]='\0';
+   printf("%s",s3);
+}
