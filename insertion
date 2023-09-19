@@ -1,0 +1,48 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+int a[20],n;
+void insert(int m)
+{
+    int c[20],k=0;
+    for(int i=0;i<n-1;i++)
+    {
+        if(m<a[i]&&m>a[i+1])
+        {
+            c[k++]=a[i];
+            c[k]=m;
+        }
+        else
+        {
+        c[k]=a[i];
+        k++;
+        }
+    }
+    for(int i=0;i<k;i++)
+    printf("%d ",c[i]);
+}
+int main()
+{
+    int temp,num;
+    printf("enter the no of students");
+    scanf("%d",&n);
+    printf("enter the marks ");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("enter the number to be inserted");
+    scanf("%d",&num);
+    for(int i=0;i<n;i++)
+    {
+        for(int  j=0;j<n-i-1;j++)
+        {
+            if(a[j]<a[j+1])
+            {
+                temp=a[j];
+                a[j]=a[j+1];
+                a[j+1]=temp;
+            }
+        }
+    }
+    insert(num);
+}
