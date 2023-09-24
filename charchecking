@@ -1,0 +1,21 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main()
+{
+    char a[100];
+    char b[10]="histogram";
+    int count=0;
+    printf("enter the string");
+    gets(a);
+    for(int j=0;b[j]!='\0';j++)
+    {
+        count=0;
+        for(int i=0;a[i]!='\0';i++)
+        {
+            if(a[i]==b[j])
+            count++;
+        }
+        printf("%c is %d\n",b[j],count);
+    }
+}
